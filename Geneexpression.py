@@ -1,40 +1,40 @@
 import random
 
-# Parameters
-POP_SIZE = 4            # Number of chromosomes in the population
-CHROMOSOME_LENGTH = 5   # Length of each chromosome (5 bits)
-MUTATION_RATE = 0.1     # Probability of a bit flipping (mutation rate)
-CROSSOVER_RATE = 0.7    # Probability of crossover between two parents
-GENERATIONS = 10        # Number of generations (iterations)
 
-# Fitness function: f(x) = x^2 (The fitness score is calculated based on the value of X)
+POP_SIZE = 4            
+CHROMOSOME_LENGTH = 5  
+MUTATION_RATE = 0.1    
+CROSSOVER_RATE = 0.7   
+GENERATIONS = 10        
+
+
 def fitness(x):
-    return x ** 2  # Fitness is just the square of X
+    return x ** 2  
 
-# Convert a binary chromosome (string of 0s and 1s) to decimal (a number)
+)
 def binary_to_decimal(chromosome):
-    return int(chromosome, 2)  # Convert the binary string to a decimal number
+    return int(chromosome, 2) 
 
-# Mutation: This function flips random bits in a chromosome
+
 def mutate(chromosome):
     new_chromosome = ''
     for bit in chromosome:
-        # Flip the bit with the mutation probability
+        
         if random.random() < MUTATION_RATE:
-            new_chromosome += '1' if bit == '0' else '0'  # Flip the bit
+            new_chromosome += '1' if bit == '0' else '0' t
         else:
-            new_chromosome += bit  # Keep the bit the same
-    return new_chromosome  # Return the mutated chromosome
+            new_chromosome += bit 
+    return new_chromosome  
 
-# Crossover: This function combines two parent chromosomes to make two children
+
 def crossover(parent1, parent2):
-    if random.random() < CROSSOVER_RATE:  # If the crossover happens
-        point = random.randint(1, CHROMOSOME_LENGTH - 1)  # Random crossover point
-        child1 = parent1[:point] + parent2[point:]  # First child
-        child2 = parent2[:point] + parent1[point:]  # Second child
+    if random.random() < CROSSOVER_RATE: 
+        point = random.randint(1, CHROMOSOME_LENGTH - 1)  
+        child1 = parent1[:point] + parent2[point:] 
+        child2 = parent2[:point] + parent1[point:] 
         return child1, child2
     else:
-        # If no crossover happens, return the parents as children
+       
         return parent1, parent2
 
 # Initial population setup (this is given manually from the table)
@@ -66,8 +66,7 @@ for generation in range(GENERATIONS):
         # Mutate the children (to introduce some randomness)
         offspring.append((mutate(child1), binary_to_decimal(child1), fitness(binary_to_decimal(child1))))
         offspring.append((mutate(child2), binary_to_decimal(child2), fitness(binary_to_decimal(child2))))
-    
-    # Update the population with the new offspring
+
     population = offspring
 
     # Print the population and their fitness after the generation
@@ -80,7 +79,8 @@ for generation in range(GENERATIONS):
     print(f"  Best solution in this generation: Chromosome = {best_solution[0]}, X = {best_solution[1]}, Fitness = {best_solution[2]}")
     print()
 
-# After all generations, print the best solution found
+
 best_overall = max(population, key=lambda x: x[2])
 print(f"Best solution after all generations: Chromosome = {best_overall[0]}, X = {best_overall[1]}, Fitness = {best_overall[2]}")
+
 
