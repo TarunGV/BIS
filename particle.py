@@ -3,15 +3,15 @@ import random
 def objective(pos):
     return pos[0]**2 + pos[1]**2
 
-# PSO parameters
+
 num_particles = 3
 num_iterations = 2
-w = 0.5      # inertia
-c1 = 1.0    # cognitive
-c2 = 1.0    # social
-r1 = r2 = 0.5  # fixed random factors for simplicity
+w = 0.5    
+c1 = 1.0   
+c2 = 1.0   
+r1 = r2 = 0.5  
 
-# Initial positions and velocities
+
 positions = [[2, 3], [-1, 4], [0, -2]]
 velocities = [[0, 0] for _ in range(num_particles)]
 pbests = [pos[:] for pos in positions]
@@ -35,3 +35,4 @@ for it in range(num_iterations):
     gbest = pbests[pbest_scores.index(min(pbest_scores))][:]
     gbest_score = min(pbest_scores)
     print(f"Iteration {it+1}: gbest position = {gbest}, gbest score = {gbest_score}")
+
