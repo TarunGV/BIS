@@ -1,13 +1,13 @@
 import random
 import math
 
-# Fitness function (objective function to minimize)
-def fitness(x):
-    return x**2  # f(x) = x^2, global minimum at x = 0
 
-# Levy flight for generating new solutions
+def fitness(x):
+    return x**2  
+
+
 def levy_flight(beta=1.5):
-    # Generate a random step using Levy flight (simplified version)
+    
     u = random.gauss(0, 1)  # Gaussian distribution for u
     v = random.gauss(0, 1)  # Gaussian distribution for v
     step = u / abs(v) ** (1 / beta)  # Levy flight step
@@ -37,7 +37,7 @@ def cuckoo_search(nests=10, max_iter=100, pa=0.25):
                 nests_positions[i] = new_nests[i]
                 fitness_values[i] = new_fitness[i]
         
-        # Abandon worst nests with probability Pa
+       
         for i in range(nests):
             if random.random() < pa:
                 nests_positions[i] = random.uniform(-10, 10)  # Generate a new random solution
@@ -55,6 +55,7 @@ def cuckoo_search(nests=10, max_iter=100, pa=0.25):
     
     return best_nest, best_fitness
 
-# Run the cuckoo search algorithm
+
 best_solution, best_value = cuckoo_search(nests=10, max_iter=100, pa=0.25)
 print(f"Global minimum found at x = {best_solution}, f(x) = {best_value}")
+
