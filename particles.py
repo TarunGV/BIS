@@ -36,3 +36,12 @@ for it in range(num_iterations):
     gbest_score = min(pbest_scores)
     print(f"Iteration {it+1}: gbest position = {gbest}, gbest score = {gbest_score}")
 
+
+ouput
+
+
+Iteration 1: gbest position = [1.0, 0.5], gbest score = 1.25
+Iteration 2: gbest position = [0.5, -0.75], gbest score = 0.8125
+
+
+
