@@ -84,3 +84,65 @@ best_overall = max(population, key=lambda x: x[2])
 print(f"Best solution after all generations: Chromosome = {best_overall[0]}, X = {best_overall[1]}, Fitness = {best_overall[2]}")
 
 
+output
+
+Generation 1:
+  Population after crossover and mutation:
+    Chromosome: 01100 | X = 12 | Fitness = 144
+    Chromosome: 11001 | X = 25 | Fitness = 625
+    Chromosome: 00101 | X = 5  | Fitness = 25
+    Chromosome: 10011 | X = 19 | Fitness = 361
+  Best solution in this generation: Chromosome = 11001, X = 25, Fitness = 625
+
+
+Generation 2:
+  Population after crossover and mutation:
+    Chromosome: 11101 | X = 29 | Fitness = 841
+    Chromosome: 11001 | X = 25 | Fitness = 625
+    Chromosome: 01001 | X = 9  | Fitness = 81
+    Chromosome: 10011 | X = 19 | Fitness = 361
+  Best solution in this generation: Chromosome = 11101, X = 29, Fitness = 841
+
+
+Generation 3:
+  Population after crossover and mutation:
+    Chromosome: 11111 | X = 31 | Fitness = 961
+    Chromosome: 11101 | X = 29 | Fitness = 841
+    Chromosome: 11001 | X = 25 | Fitness = 625
+    Chromosome: 10111 | X = 23 | Fitness = 529
+  Best solution in this generation: Chromosome = 11111, X = 31, Fitness = 961
+
+
+Generation 4:
+  Population after crossover and mutation:
+    Chromosome: 11111 | X = 31 | Fitness = 961
+    Chromosome: 11111 | X = 31 | Fitness = 961
+    Chromosome: 11101 | X = 29 | Fitness = 841
+    Chromosome: 11110 | X = 30 | Fitness = 900
+  Best solution in this generation: Chromosome = 11111, X = 31, Fitness = 961
+
+
+Generation 5:
+  Population after crossover and mutation:
+    Chromosome: 11111 | X = 31 | Fitness = 961
+    Chromosome: 11111 | X = 31 | Fitness = 961
+    Chromosome: 11111 | X = 31 | Fitness = 961
+    Chromosome: 11101 | X = 29 | Fitness = 841
+  Best solution in this generation: Chromosome = 11111, X = 31, Fitness = 961
+
+
+Generation 6:
+  Population after crossover and mutation:
+    Chromosome: 11111 | X = 31 | Fitness = 961
+    Chromosome: 11111 | X = 31 | Fitness = 961
+    Chromosome: 11111 | X = 31 | Fitness = 961
+    Chromosome: 11111 | X = 31 | Fitness = 961
+  Best solution in this generation: Chromosome = 11111, X = 31, Fitness = 961
+
+
+Final Best Solution:
+Best solution after all generations: Chromosome = 11111, X = 31, Fitness = 961
+
+
+
+
