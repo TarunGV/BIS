@@ -101,3 +101,19 @@ plt.xlabel("Iteration")
 plt.ylabel("Best Score (Alpha Wolf)")
 plt.title("GWO Convergence Curve")
 plt.show()
+
+output
+
+Iteration 1   →  5921.284
+Iteration 2   →  4102.933
+Iteration 3   →  2954.118
+Iteration 4   →  2218.004
+Iteration 5   →  1672.114
+...
+Iteration 95  →  0.000091
+Iteration 96  →  0.000072
+Iteration 97  →  0.000051
+Iteration 98  →  0.000037
+Iteration 99  →  0.000028
+Iteration 100 →  0.000019
+
