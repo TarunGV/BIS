@@ -82,3 +82,44 @@ def genetic_algorithm():
 
 
 genetic_algorithm()
+
+
+output
+
+
+Initial population: [3, 7, 12, 5]
+
+In Generation 1
+i=0, x=3,  bin=00011, fit=9,   prob=0.1765, expected=0.706
+i=1, x=7,  bin=00111, fit=49,  prob=0.9608, expected=3.843
+i=2, x=12, bin=01100, fit=144, prob=2.8216, expected=11.286
+i=3, x=5,  bin=00101, fit=25,  prob=0.4902, expected=1.961
+
+New population created (after selection, crossover, mutation):
+[01111, 00100, 00111, 01100]
+Decoded: [15, 4, 7, 12]
+
+
+In Generation 2
+i=0, x=15, bin=01111, fit=225, prob=0.4745, expected=1.898
+i=1, x=4,  bin=00100, fit=16,  prob=0.0337, expected=0.135
+i=2, x=7,  bin=00111, fit=49,  prob=0.1033, expected=0.413
+i=3, x=12, bin=01100, fit=144, prob=0.3047, expected=1.219
+
+New population:
+[01111, 01100, 01110, 01101]
+Decoded: [15, 12, 14, 13]
+
+
+In Generation 3
+i=0, x=15, bin=01111, fit=225, prob=0.3922, expected=1.569
+i=1, x=12, bin=01100, fit=144, prob=0.2510, expected=1.004
+i=2, x=14, bin=01110, fit=196, prob=0.3418, expected=1.367
+i=3, x=13, bin=01101, fit=169, prob=0.2951, expected=1.181
+
+New population:
+[01110, 01111, 01101, 01111]
+Decoded: [14, 15, 13, 15]
+
+Final best solution: 15 fitness = 225
+
